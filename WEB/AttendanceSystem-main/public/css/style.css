@@ -1,0 +1,522 @@
+/* Applies basic styles to the entire page */
+body {
+    font-family: Arial, sans-serif; /* Sets the font to Arial or a sans-serif fallback */
+    /* background-color:#A1D6B2; Sets a light green background color */
+    background-color:#82aff1; 
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    color: #333; /* Sets the default text color to a dark gray */
+}
+
+
+
+
+
+/* Styles the main content area */
+main {
+    display: flex; /* Uses flexbox layout */
+    justify-content: center; /* Centers the content horizontally */
+    padding: 20px; /* Adds padding of 20px around the content */
+}
+
+/* Styles the container for employee cards */
+.employee-container {
+    display: grid; /* Uses grid layout */
+    grid-template-columns: repeat(5, 1fr); /* Creates exactly 5 equal-width columns */
+    gap: 20px; /* Sets the gap between grid items to 20px */
+    width: 100%; /* Makes the container take up the full width of its parent */
+    max-width: 1200px; /* Sets a maximum width for the container */
+    margin: 0 auto; /* Centers the container horizontally */
+}
+
+/* Adjust grid layout for smaller screens */
+@media (max-width: 1200px) {
+    .employee-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for slightly smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .employee-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .employee-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .employee-container {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+    }
+}
+.employee-container a{
+    text-decoration: none;
+}
+
+.employee-card {
+    display: block; /* Ensures the anchor tag takes up the full block */
+    text-decoration: none; /* Removes the underline from the text */
+    color: inherit; /* Inherits the color from the parent element to avoid default blue color */
+    background-color:#E7FBE6;  /* Maintains the background color */
+    border-radius: 10px; /* Keeps the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Maintains the shadow effect */
+    padding: 15px; /* Keeps the padding */
+    text-align: center; /* Keeps text centered */
+    transition: transform 0.2s ease-in-out; /* Maintains the hover effect */
+}
+
+/* Hover effect */
+.employee-card:hover {
+    transform: scale(1.05); /* Keeps the hover effect scaling */
+}
+
+/* Styles the photo section inside employee cards */
+.employee-photo {
+    margin-bottom: 10px; /* Adds space below the photo */
+}
+
+/* Styles the photo image inside employee cards */
+.employee-photo img {
+    border-radius: 50%; /* Makes the image circular */
+    width: 100px; /* Sets the width of the image */
+    height: 100px; /* Sets the height of the image */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Styles the information section inside employee cards */
+.employee-info {
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Styles the employee name */
+.employee-info h2 {
+    margin: 10px 0; /* Adds vertical margin around the heading */
+    font-size: 1.2em; /* Sets the font size to 1.2 times the base size */
+    color: #2c3e50; /* Sets the text color to dark blue */
+}
+
+/* Styles the additional information text */
+.employee-info p {
+    margin: 5px 0; /* Adds vertical margin around the paragraph */
+    font-size: 0.9em; /* Sets the font size to 0.9 times the base size */
+}
+
+
+
+/* Container for the entire employee details page */
+.employee-details-container {
+    background-color: #E7FBE6; /* Light background color */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Employee card for detailed view */
+.employee-card-detail {
+    border: none; /* Removes default card border */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for emphasis */
+    background: linear-gradient(135deg, #E3F2FD 0%, #E0F7FA 100%); /* Gradient background */
+}
+
+/* Styles for the employee photo section */
+.employee-photo-detail {
+    background: linear-gradient(135deg, #64B5F6 0%, #4FC3F7 100%); /* Gradient background for photo section */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Employee info section */
+.employee-info-detail .card-body {
+    padding: 30px;
+    color: #34495E; /* Darker text color */
+}
+
+/* Gradient text for headers */
+.text-primary-gradient {
+    background: linear-gradient(135deg, #42A5F5 0%, #26C6DA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-secondary-gradient {
+    background: linear-gradient(135deg, #26C6DA 0%, #80DEEA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* view.ejs */
+
+.employee-detail-card {
+   
+        max-width: 900px;
+        margin-top:20px;
+        margin-left: 20px;
+        margin-right:20px;
+       
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border: 1px solid #e1e1e1;
+    
+    
+}
+
+.employee-detail-name {
+    color: #222222; /* Use your preferred palette color */
+}
+
+.employee-detail-card h4 {
+    margin-top: 15px;
+}
+
+.employee-detail-card p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+
+.btn-warning, .btn-danger {
+    width: 150px;
+}
+
+#buttonColor{
+    background-color: #FEFFD2;
+}
+
+#buttonColor2{
+    background-color: #FEFFD2;
+}
+
+/* navbar */
+
+.navbar{
+    height:5rem;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.fa-clapperboard{
+    color:#139795;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.nav-link{
+    color:#222222 !important;
+}
+
+.navbar-collapse{
+    background-color: white;
+}
+
+/* footer */
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 60vh;
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    background-color: #ebebeb;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+.f-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials {
+    margin-bottom: 5px;
+    
+}
+
+.f-info-socials i {
+    font-size: 20px;
+    color:#555;
+    margin: 0 5px;
+    /* color: #000; Adjust icon color */
+}
+
+.f-info-brand {
+    margin: 5px 0;
+    
+    
+}
+
+
+
+.f-info-links a {
+    
+    margin-left :3px;
+    text-decoration: none;
+    margin: 2 5px;
+    color:#000;
+    
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* .f-info-links a{
+    text-decoration: none;
+    color:#222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info-links,.f-info-socials,.f-info-brand{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+
+
+.f-info-socials i{
+    font-size:1.2rem;
+    margin-right:1rem;
+    
+}
+
+
+.f-info{
+    background-color: #ebebeb;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    height:7rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly; */
+
+    /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+     */
+    
+    
+    /* height:7rem;
+    background-color: #ebebeb;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly; */
+/* } */
+
+/* privacy page */
+
+
+
+/* styles.css */
+
+/* Specific Styles for Privacy Policy Page */
+.privacy-policy-card {
+    max-width: 900px;
+    margin-top:20px;
+    margin-left: 20px;
+    margin-right:20px;
+   
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e1e1e1;
+}
+
+.privacy-policy-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.privacy-policy-intro {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.privacy-policy-section-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #222;
+    margin: 20px 0 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.privacy-policy-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-link {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.privacy-policy-link:hover {
+    text-decoration: underline;
+}
+
+
+/* terms */
+
+/* styles.css */
+
+/* Specific Styles for Terms and Conditions Page */
+.terms-conditions-card {
+    max-width: 900px;
+    margin-top:20px;
+    margin-left: 20px;
+    margin-right:20px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e1e1e1;
+}
+
+.terms-conditions-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.terms-conditions-intro {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.terms-conditions-section-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #222;
+    margin: 20px 0 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.terms-conditions-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.terms-conditions-link {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.terms-conditions-link:hover {
+    text-decoration: underline;
+}
+
+
+/* home */
+
+/* Hero Section Styling */
+.hero {
+    background: #007bff;
+    color: #fff;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.25rem;
+}
+.hero .btn {
+    margin-top: 20px;
+}
+
+/* About Us Section Styling */
+.about {
+    background: #f8f9fa;
+}
+.about p {
+    font-size: 1.1rem;
+}
+
+/* Features Section Styling */
+.features {
+    background: #e9ecef;
+}
+.features .feature-icon {
+    margin-bottom: 20px;
+}
+.features i {
+    color: #007bff;
+}
+
+/* Call to Action Section Styling */
+.call-to-action {
+    background: #343a40;
+    color: #fff;
+}
+.call-to-action h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.call-to-action p {
+    font-size: 1.25rem;
+}
+.call-to-action .btn {
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+.footer {
+    background: #343a40;
+}
+.footer p {
+    margin: 0;
+}
+.footer a {
+    color: #f8f9fa;
+}
+.footer a:hover {
+    text-decoration: underline;
+}

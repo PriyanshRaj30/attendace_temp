@@ -1,0 +1,58 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h1>Edit Student</h1>
+
+        <form method="post" action="/students/<%= student._id %>?_method=PUT" class="needs-validation" novalidate>
+
+            <!-- Student Name -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" value="<%= student.name %>" class="form-control" required />
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <!-- Student Department -->
+            <div class="mb-3">
+                <label for="department" class="form-label">Department</label>
+                <input type="text" name="dept" value="<%= student.dept %>" class="form-control" required />
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <!-- Student Position -->
+            <div class="mb-3">
+                <label for="position" class="form-label">Position</label>
+                <input type="text" name="postion" value="<%= student.postion %>" class="form-control" required />
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <!-- Student Starting Year -->
+            <div class="mb-3">
+                <label for="starting_year" class="form-label">Starting Year</label>
+                <input type="number" name="starting_year" value="<%= student.starting_year %>" class="form-control" required />
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <!-- Total Attendance -->
+            <div class="mb-3">
+                <label for="total_attendance" class="form-label">Total Attendance</label>
+                <input type="number" name="total_attendance" value="<%= student.total_attendance %>" class="form-control" required />
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <!-- Student Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" value="<%= student.email %>" class="form-control" required />
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <!-- Submit Button -->
+            <button class="btn btn-dark edit-btn mt-3">Edit</button>
+        </form>
+
+        <br>
+
+    </div>
+</div>

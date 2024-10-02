@@ -1,0 +1,39 @@
+2024-09-30 22:08:56.161521 - Image captured for 1222
+2024-09-30 22:08:56.862747 - Student 1222 saved to MongoDB.
+2024-09-30 22:08:56.863999 - Student 1222 details updated in JSON file.
+2024-09-30 22:13:52.368934 - Image captured for 123
+2024-09-30 22:13:53.036596 - Student 123 saved to MongoDB.
+2024-09-30 22:13:53.037650 - Student 123 details updated in JSON file.
+2024-10-01 10:54:01.352598 - Image captured for 0012
+2024-10-01 10:54:01.990922 - Student 0012 saved to MongoDB.
+2024-10-01 10:54:01.991551 - Student 0012 details updated in JSON file.
+2024-10-01 12:14:05.799429 - Image captured for 1
+2024-10-01 12:14:06.478470 - Student 1 saved to MongoDB.
+2024-10-01 12:14:06.479205 - Student 1 details updated in JSON file.
+2024-10-01 13:06:04.667065 - Image captured for 21
+2024-10-01 13:06:05.325722 - Student 21 saved to MongoDB.
+2024-10-01 13:06:05.326188 - Student 21 details updated in JSON file.
+2024-10-01 17:36:08.131410 - Image captured for 79
+2024-10-01 17:36:08.801486 - Student 79 saved to MongoDB.
+2024-10-01 17:36:08.802062 - Student 79 details updated in JSON file.
+2024-10-02 11:19:41.620438 - Image captured for 12301
+2024-10-02 11:19:42.255557 - Student 12301 saved to MongoDB.
+2024-10-02 11:19:42.256177 - Student 12301 details updated in JSON file.
+2024-10-02 11:22:05.607085 - Image captured for 453
+2024-10-02 11:22:06.213920 - Student 453 saved to MongoDB.
+2024-10-02 11:22:06.214549 - Student 453 details updated in JSON file.
+2024-10-02 12:22:19.614804 - Image captured for 1
+2024-10-02 12:22:20.267051 - Student 1 saved to MongoDB.
+2024-10-02 12:22:20.268096 - Student 1 details updated in JSON file.
+2024-10-02 12:25:20.472220 - Image captured for 123
+2024-10-02 12:25:21.138657 - Student 123 saved to MongoDB.
+2024-10-02 12:25:21.139699 - Student 123 details updated in JSON file.
+2024-10-02 13:00:41.278217 - Image captured for 123
+2024-10-02 13:00:41.934423 - Student 123 saved to MongoDB.
+2024-10-02 13:00:41.935989 - Student 123 details updated in JSON file.
+2024-10-02 14:43:34.289769 - Image captured for 69
+2024-10-02 14:43:34.923992 - Student 69 saved to MongoDB.
+2024-10-02 14:43:34.925408 - Student 69 details updated in JSON file.
+2024-10-02 14:47:26.226347 - Image captured for 45
+2024-10-02 14:47:26.892837 - Student 45 saved to MongoDB.
+2024-10-02 14:47:26.893289 - Student 45 details updated in JSON file.

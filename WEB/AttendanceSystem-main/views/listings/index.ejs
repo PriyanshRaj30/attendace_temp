@@ -1,0 +1,22 @@
+<% layout("/layouts/boilerplate") %> <!-- Specifies the layout file to use -->
+
+<body>
+    <main class="container mt-5"> <!-- Main content area with Bootstrap container class for layout -->
+        <div class="row"> <!-- Row to hold the student cards -->
+            <% students.forEach(student => { %> <!-- Iterates over the students array and renders each student's card -->
+                <div class="col-md-4 mb-4"> <!-- Each card occupies 4 columns in medium devices (Bootstrap grid) -->
+                    <a href="/students/<%= student._id %>" class="text-decoration-none text-dark"> <!-- Link to the student detail page -->
+                        <div class="card h-100"> <!-- Bootstrap card component with full height -->
+                            <div class="card-body"> <!-- Card body where the content goes -->
+                                <h5 class="card-title"><b><%= student.name %></b></h5> <!-- Student's name as card title -->
+                                <p class="card-text"><strong>Department:</strong> <%= student.dept %></p> <!-- Student's department -->
+                                <p class="card-text"><strong>Position:</strong> <%= student.postion %></p> <!-- Student's position -->
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <% }) %> <!-- End of the loop -->
+        </div>
+    </main>
+</body>
+</html>

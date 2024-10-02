@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-light sticky-top">
+    <a class="navbar-brand" href="/students"><i class="fa-solid fa-graduation-cap"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/students">Home <span class="sr-only">(current)</span></a>
+        
+        </div>
+
+        <div class="navbar-nav ms-auto">
+            <% if(!currUser){ %>
+            <a class="nav-item nav-link" href="/signup">Sign Up</a>
+            <a class="nav-item nav-link" href="/login">Login</a>
+            <% } %>
+            <% if(currUser){ %>
+            <a class="nav-item nav-link" href="/logout">Log Out</a>
+            <% } %>
+        </div>
+    </div>
+</nav>

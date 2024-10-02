@@ -1,0 +1,29 @@
+{
+    "321654": {
+        "dept": "Physics",
+        "email": "Neeraj12@gmail.com",
+        "last_attendance_time": "2022-12-11 00:54:34",
+        "name": "Neeraj",
+        "postion": "Robotics",
+        "starting_year": 2017,
+        "total_attendance": 7
+    },
+    "852741": {
+        "dept": "Commerce",
+        "email": "theemlyblunt@gmail.com",
+        "last_attendance_time": "2022-12-11 00:54:34",
+        "name": "Emly Blunt",
+        "postion": "Economics",
+        "starting_year": 2021,
+        "total_attendance": 12
+    },
+    "963852": {
+        "dept": 2,
+        "email": "realironman@gmail.com",
+        "last_attendance_time": "2022-12-11 00:54:34",
+        "name": "Elon Musk",
+        "postion": "Physics",
+        "starting_year": 2020,
+        "total_attendance": 7
+    }
+}
